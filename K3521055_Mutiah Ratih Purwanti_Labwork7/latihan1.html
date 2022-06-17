@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+
+    <!-- tampilan kalkulator dengan css -->
+    <style type="text/css">
+        /* tampilan tombol operator */
+        .button1{
+            background-color: black;
+            color: white;
+        }
+        /* tampilan tombol hasil dan reset  */
+        .button2{
+            color: black;
+            background-color: white;
+        }
+        /* tampilan tabel kalkulator  */
+        .table{
+            background-color: salmon;
+            margin: 12px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- judul -->
+    <h1><center>Simple Calculator</center></h1>
+
+    <!-- tabel kalkulator -->
+    <form name="calculator"><center>
+        <table class="table">
+            <tr>
+                <td>Angka Pertama</td><td>:</td><td><input type="number" name="angka1"></td>
+            </tr>
+            <tr>
+                <td>Angka Kedua</td><td>:</td><td><input type="number" name="angka2"></td>
+            </tr>
+            <tr>
+                <td>Hasil</td><td>:</td><td><input type="number" name="hasil" disabled="true"></td>
+            </tr>
+            <tr>
+                <td>Operator</td>
+                <td></td>
+                <td>
+                    <select name="operator" class="button1">
+                        <option value="tambah"> + (tambah)</option>
+                        <option value="kurang"> - (kurang)</option>
+                        <option value="kali"> * (kali)</option>
+                        <option value="bagi"> / (bagi)</option>
+                    </select>
+                    <input type="button" class="button2" value="=" onClick="hitung()" />
+                    <input type="button" class="button2" value="CLEAR" onClick="resetForm()" />
+                </td>
+            </tr>
+        </table>
+    </center></form>
+
+    <!-- perhitungan dengan javascript  -->
+    <script type="text/javascript">
+    
+    // menghitung dengan operator yang dipilih
+    function hitung(){
+        var myForm = document.calculator;
+        var x=eval(myForm.angka1.value);
+        var y=eval(myForm.angka2.value);
+        var pilihan= myForm.operator.value;
+        
+        if (pilihan == "tambah") {
+            var z = x + y;
+        } else if (pilihan == "kurang") {
+            var z = x - y;
+        } else if (pilihan == "kali") {
+            var z = x * y;
+        } else if (pilihan == "bagi") {
+            var z = x / y;
+        }
+        
+        myForm.hasil.value = z;
+        myForm.angka1.value = "";
+        myForm.angka2.value = "";
+    }
+    
+    // mengatur ulang kalkulator 
+    function resetForm(){
+        document.calculator.reset();
+    }
+    </script>
+    
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profil</title>
+
+    <!-- tampilan kalimat yang berubah -->
+    <style>
+        .high.light{
+            background-color: yellow;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- paragraf yang akan diubah -->
+    <h1>PTIK FKIP UNS</h1>
+    <p>The <span class="high">Faculty of Teacher Training and Education, Sebelas Maret University</span>, Surakarta is an <span class="high">Educational Personnel Education Institution (LPTK)</span> which has 24 study programs in 6 majors. Each study program has its own characteristics in producing <span class="high">superior, strong and intelligent educational staff</span>.</p>
+    <p>The <span class="high">Informatics and Computer Technology Education (PTIK)</span> study program is planned to take shelter in the management of the <span class="high">Engineering and Vocational Education (PTK)</span> department. This placement revises our previous statement, where the PTIK study program is under the P.MIPA department. PTIK is a study program that will produce graduates who are <span class="high">prioritized to teach in vocational/vocational programs</span>. So, it would be better if PTIK was under the PTK department which oversees vocational programs such as <span class="high" >Building Engineering Education</span> and <span class="high" >Mechanical Engineering Education</span> To meet the needs of lecturers in the field of information technology that cannot be met by the PTK department, PTIK will conduct <span class="high" >resource sharing with the mathematics study program</span></p>
+
+    <input type="button" value="Highlight Kalimat" onClick="high()" />
+
+    <!-- perubahan kalimat dengan javascript  -->
+    <script>
+
+        // seleksi kalimat yang akan diubah 
+        var highlight = document.querySelectorAll('.high');
+
+        // mengubah kalimat sesuai tampilan 
+        var high = () => {
+            highlight.forEach((item) => {
+                item.classList.toggle('light');
+            })
+        };
+    </script>
+    
+</body>
+</html>
+

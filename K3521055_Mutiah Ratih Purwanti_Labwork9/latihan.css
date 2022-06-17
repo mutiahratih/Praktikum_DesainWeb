@@ -1,0 +1,57 @@
+/* style untuk body  */
+body {
+    padding: 0;
+    margin: 0;
+    background: #e7ebe0;
+}
+
+/* style untuk bar navigasi  */
+.navbar {
+    background: white;
+    padding: 10px;
+}
+.nav-link,
+.navbar-brand {
+    color: rgb(255, 0, 255);
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: black;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* style untuk isi/konten  */
+.features {
+    margin: 4em auto;
+    padding: 1em;
+    position: relative;
+}
+.feature-title {
+    color: rgb(211, 33, 137);
+    background-color: beige;
+    padding: 0.5em;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* style untuk footer  */
+.page-footer {
+    font-weight: 500;
+    background-color: white;
+    color: rgb(255, 0, 255);
+    padding: 20px 0 30px;
+}
+@media (max-width: 575.98px) {
+    .navbar {
+        position: relative;
+        margin: 0;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menggunakan media Query CSS3</title>
+
+    <style>
+        .smartphone {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1024px){
+            .smartphone{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>Menggunakan Media Query CSS 3</h3>
+    <div class="smartphone">
+        <center>
+            <h2>Universitas Sebelas Maret</h2>
+            <img src="logouns.png" width="300px">
+        </center>
+    </div>
+</body>
+</html>
